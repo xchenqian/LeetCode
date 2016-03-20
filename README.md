@@ -1,2 +1,2 @@
 # LeetCode
-Try it!
+Just try it!
