@@ -23,7 +23,8 @@ void merge(int* nums1, int m, int* nums2, int n) {
 	for(i=0;i<m+n;i++){
 		nums1[i]=temp[i];
 	}
-}*/
+}
+*/
 
 void merge(int* nums1, int m, int* nums2, int n) {
 	int i=m-1,j=n-1,k=m+n-1;
@@ -34,18 +35,17 @@ void merge(int* nums1, int m, int* nums2, int n) {
 			nums1[k--]=nums2[j--];
 		}
 	}
-	while(i>=0){
-		nums1[k--]=nums1[i--];
-	}
 	while(j>=0){
 		nums1[k--]=nums2[j--];
+	}
+	for(i=0;i<m+n;i++){
+		printf("%d:%d\n", i, nums1[i]);
 	}
 }
 
 int main(){
-	int m=100,n=5;
-	int nums1[100]={1,3,4,9,10,51};
-	int nums2[]={2,4,6,8,52};
+	int nums1[]={1,2,4,9,10,51};
+	int nums2[]={3,4,6,8,52};
 	merge(nums1,6,nums2,5);
 	return 0;
 }
