@@ -15,17 +15,25 @@ int isPalindrome(char* s) {
     if(!k){
     	return 1;
     }
-    for(i=0;i<=k/2;i++){
+    /*for(i=0;i<=k/2;i++){
     	if(temp[i]!=temp[k-i-1]){
     		return 0;
     	}
+    }*/
+    int left=0,right=k-1;
+    while(left<right){
+    	if(temp[left]!=temp[right]){
+    		return 0;
+    	}
+    	left++;
+    	right--;
     }
     return 1;
 }
 
 int main()
 {
-	char s[]="A man, a plan, a canal: Panama";
+	char s[]="'''''";
 	if(isPalindrome(s)){
 		printf("yes!\n");
 	}else{
