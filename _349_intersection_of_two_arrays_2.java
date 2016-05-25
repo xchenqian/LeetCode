@@ -74,8 +74,7 @@ public class _349_intersection_of_two_arrays_2 {
         int pt=0;
 
         Iterator it = res.iterator();        
-        while(it.hasNext()){
-            //System.out.println("res "+(int)it.next());
+        while(it.hasNext()){            
             result[pt++]=(int)it.next();            
         }
 
