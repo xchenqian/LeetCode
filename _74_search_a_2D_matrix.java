@@ -21,6 +21,14 @@ public class _74_search_a_2D_matrix{
                 break;
             }
         }
+        
+        if(matrix[start / columns][start % columns] == target){
+            found = true;
+        }
+        if(matrix[end / columns][end % columns] == target){
+            found = true;
+        }
+        
         return found;
     }
     
