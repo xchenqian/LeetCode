@@ -23,6 +23,7 @@ private:
         for(int i=instart; i<=inend; i++){
             if(inorder[i] == preorder[prestart]){
                 rootIndex = i;
+                break;
             }   
         }
         root->left = helper(prestart + 1, instart, rootIndex - 1, preorder, inorder);
